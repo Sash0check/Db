@@ -33,8 +33,8 @@
 
 /*Представление с доступными кнгиами*/
 
-CREATE VIEW available_books 
+CREATE VIEW available_books
           AS SELECT * 
           FROM `books` where vailable=1;
 
-SELECT * FROM available_books
+SELECT * FROM available_books;
