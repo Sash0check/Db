@@ -69,7 +69,7 @@ CREATE TABLE `fines` (
 	`id` INT NOT NULL AUTO_INCREMENT,
 	`delivery_id` INT NOT NULL,
 	`description` varchar(255) NOT NULL,
-	`pice` INT NOT NULL,
+	`price` INT NOT NULL,
 	PRIMARY KEY (`id`)
 );
 
