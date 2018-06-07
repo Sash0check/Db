@@ -30,6 +30,15 @@
 Примеры типовых операций представлены в файле *typical_operations.sql*.
 
 #### Представления
+       
+          /*Представление с основной информацикй о заказе*/
+          CREATE VIEW delivery_allinfo 
+          AS SELECT `delivery`.id  as 'delivery_id',`clients`.name  as 'client_name', `clients`.lastname  as 'client_lastname',
+          `books`.name as 'book_name', `workers`.lastname as 'worker_lastname'
+          FROM `clients`,`books`,`workers`,`delivery`;
+
+          SELECT * FROM delivery_allinfo where delivery_id=1
+          
           /*Представление с доступными кнгиами*/
           CREATE VIEW available_books
                     AS SELECT * 
