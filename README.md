@@ -29,8 +29,10 @@
 ## Примеры типовых операций
 Примеры типовых операций представлены в файле *typical_operations.sql*.
 
-## Представления
+### Представления
+
 /*Представление с доступными кнгиами*/
+
 CREATE VIEW available_books 
           AS SELECT * 
           FROM `books` where vailable=1;
