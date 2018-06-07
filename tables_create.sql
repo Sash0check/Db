@@ -31,13 +31,13 @@ CREATE TABLE `workers` (
 	`id` INT NOT NULL AUTO_INCREMENT,
 	`name` varchar(50) NOT NULL,
 	`lastname` varchar(50) NOT NULL,
-	`phone_numder` varchar NOT NULL,
-	`adress` varchar NOT NULL,
-	`dbirth` varchar NOT NULL,
-	`email` varchar NOT NULL,
+	`phone_numder` varchar(10) NOT NULL,
+	`adress` varchar(100) NOT NULL,
+	`dbirth` varchar(20) NOT NULL,
+	`email` varchar(50) NOT NULL,
 	`patronymic` varchar(50) NOT NULL,
 	PRIMARY KEY (`id`)
-);
+)
 
 CREATE TABLE `authors` (
 	`id` INT NOT NULL AUTO_INCREMENT,
@@ -49,7 +49,7 @@ CREATE TABLE `authors` (
 
 CREATE TABLE `genre` (
 	`id` INT NOT NULL AUTO_INCREMENT,
-	`name` varchar NOT NULL,
+	`name` varchar(50) NOT NULL,
 	PRIMARY KEY (`id`)
 );
 
@@ -68,7 +68,7 @@ CREATE TABLE `book_delivery` (
 CREATE TABLE `fines` (
 	`id` INT NOT NULL AUTO_INCREMENT,
 	`delivery_id` INT NOT NULL,
-	`description` varchar NOT NULL,
+	`description` varchar(255) NOT NULL,
 	`pice` INT NOT NULL,
 	PRIMARY KEY (`id`)
 );
