@@ -33,7 +33,7 @@ CREATE TABLE `workers` (
 	`lastname` varchar(50) NOT NULL,
 	`phone_numder` varchar(12) NOT NULL,
 	`adress` varchar(100) NOT NULL,
-	`dbirth` varchar(20) NOT NULL,
+	`dbirth` DATE NOT NULL,
 	`email` varchar(50) NOT NULL,
 	`patronymic` varchar(50) NOT NULL,
 	PRIMARY KEY (`id`)
