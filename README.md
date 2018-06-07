@@ -30,11 +30,9 @@
 Примеры типовых операций представлены в файле *typical_operations.sql*.
 
 #### Представления
+          /*Представление с доступными кнгиами*/
+          CREATE VIEW available_books
+                    AS SELECT * 
+                    FROM `books` where vailable=1;
 
-/*Представление с доступными кнгиами*/
-
-CREATE VIEW available_books
-          AS SELECT * 
-          FROM `books` where vailable=1;
-
-SELECT * FROM available_books;
+          SELECT * FROM available_books;
