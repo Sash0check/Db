@@ -41,11 +41,11 @@
           
        /*Представление с основной информациeй о книге*/
           CREATE VIEW information_about_book
-                    AS SELECT `books`.name as 'book_name',  `authors`.firstname as 'author_name',
+                    AS SELECT `books`.id as 'id_book',`books`.name as 'book_name',  `authors`.firstname as 'author_name',
 					`authors`.secondname as 'author_secondname',	`authors`.patronymic as 'author_patronymic'
                     FROM `books`,`authors`,`book_authors` where `books`.id=`book_authors`.book_id and 	 `book_authors`.author_id=`authors`.id;
 
-          SELECT * FROM available_books;
+          SELECT * FROM information_about_book WHERE `id_book`=1;
 		  
        /*Представление с доступными книгами*/
           CREATE VIEW available_books
