@@ -31,7 +31,7 @@
 
 #### Представления
        
-          /*Представление с основной информацикй о заказе*/
+       /*Представление с основной информациeй о заказе*/
           CREATE VIEW delivery_allinfo 
           AS SELECT `delivery`.id  as 'delivery_id',`clients`.name  as 'client_name', `clients`.lastname  as 'client_lastname',
           `books`.name as 'book_name', `workers`.lastname as 'worker_lastname'
@@ -39,9 +39,17 @@
 
           SELECT * FROM delivery_allinfo where delivery_id=1
           
-          /*Представление с доступными кнгиами*/
+       /*Представление с основной информациeй о книге*/
+          CREATE VIEW information_about_book
+                    AS SELECT `books`.name as 'book_name',  `authors`.firstname as 'author_name',
+					`authors`.secondname as 'author_secondname',	`authors`.patronymic as 'author_patronymic'
+                    FROM `books` where `books`.id=`book_authors`.book_id and `book_authors`.author_id=`authors`.id;
+
+          SELECT * FROM available_books;
+		  
+       /*Представление с доступными книгами*/
           CREATE VIEW available_books
                     AS SELECT * 
-                    FROM `books` where vailable=1;
+                    FROM information_about_book where `books`.availability=1;
 
           SELECT * FROM available_books;
