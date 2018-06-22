@@ -43,7 +43,7 @@
           CREATE VIEW information_about_book
                     AS SELECT `books`.name as 'book_name',  `authors`.firstname as 'author_name',
 					`authors`.secondname as 'author_secondname',	`authors`.patronymic as 'author_patronymic'
-                    FROM `books` where `books`.id=`book_authors`.book_id and `book_authors`.author_id=`authors`.id;
+                    FROM `books`,`authors`,`book_authors` where `books`.id=`book_authors`.book_id and 	 `book_authors`.author_id=`authors`.id;
 
           SELECT * FROM available_books;
 		  
