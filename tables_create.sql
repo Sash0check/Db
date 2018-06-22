@@ -2,7 +2,7 @@ CREATE TABLE `books` (
 	`id` INT NOT NULL AUTO_INCREMENT,
 	`name` varchar(100) NOT NULL,
 	`extra_information` varchar(255) NOT NULL,
-	`avalibality` BOOLEAN NOT NULL,
+	`availability` BOOLEAN NOT NULL,
 	PRIMARY KEY (`id`)
 );
 
