@@ -51,6 +51,6 @@
        /*Представление с доступными книгами*/
           CREATE VIEW available_books
                     AS SELECT * 
-                    FROM information_about_book where `books`.availability=1;
+                    FROM information_about_book where availability=1;
 
           SELECT * FROM available_books;
