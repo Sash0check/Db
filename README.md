@@ -32,17 +32,20 @@
 #### Представления
        
        /*Представление с основной информациeй о заказе*/
-          CREATE VIEW delivery_allinfo 
-          AS SELECT `delivery`.id  as 'delivery_id',`clients`.name  as 'client_name', `clients`.lastname  as 'client_lastname',
-          `books`.name as 'book_name', `workers`.lastname as 'worker_lastname'
-          FROM `clients`,`books`,`workers`,`delivery`;
+          CREATE VIEW delivery_info 
+          AS SELECT `delivery`.id  as `delivery_id`,`clients`.firstname  as `client_name`, 
+		  `clients`.lastname  as `client_lastname`, `books`.name as `book_name`, 
+		  `workers`.lastname as `worker_lastname`
+          FROM `clients`,`books`,`workers`,`delivery`,`book_delivery` 
+		  WHERE `delivery`.id=`book_delivery`.delivery_id and `book_delivery`.book_id=`books`.id
+		  and `clients`.id=`delivery`.client_id and `delivery`.worker_id=`workers`.id;
 
-          SELECT * FROM delivery_allinfo where delivery_id=1
+          SELECT * FROM delivery_info where delivery_id=1
           
        /*Представление с основной информациeй о книге*/
           CREATE VIEW information_about_book
                     AS SELECT `books`.id as 'id_book',`books`.name as 'book_name',  `authors`.firstname as 'author_name',
-		`authors`.secondname as 'author_secondname',	`authors`.patronymic as 'author_patronymic',
+		`authors`.lastname as 'author_lastname',	`authors`.patronymic as 'author_patronymic',
 		`books`.availability as `availability`
                     FROM `books`,`authors`,`book_authors` where `books`.id=`book_authors`.book_id and 	 `book_authors`.author_id=`authors`.id;
 
