@@ -27,10 +27,10 @@ INSERT INTO `books_genres` (`book_id`, `genre_id`) VALUES ('6', '2');
 
 
 /*Добавление заказа*/
-INSERT INTO `deliverys` (`id`, `client_id`, `date_of_delivery`, `date_of_return`, `worker_id`) VALUES (NULL, '1', '2018-06-07', '2018-06-08', '1');
+INSERT INTO `deliverys` (`client_id`, `date_of_delivery`, `date_of_return`, `worker_id`) VALUES ('1', '2018-06-07', '2018-06-08', '1');
 
 /*Определение книги*/
-INSERT INTO `books_deliverys` (`delivery_id`, `book_id`) VALUES ('1', '1');
+INSERT INTO `books_deliverys` (`delivery_id`, `book_id`) VALUES ('6', '6');
 
 /*Обновление доступности книги*/
 UPDATE `books` SET `availability` = 0 WHERE `id` = 1;
