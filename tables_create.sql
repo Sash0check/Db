@@ -6,7 +6,7 @@ CREATE TABLE `books` (
 	PRIMARY KEY (`id`)
 );
 
-CREATE TABLE `delivery` (
+CREATE TABLE `deliverys` (
 	`id` INT NOT NULL AUTO_INCREMENT,
 	`client_id` INT NOT NULL,
 	`date_of_delivery` DATE NOT NULL,
@@ -59,7 +59,7 @@ CREATE TABLE `books_authors` (
 	PRIMARY KEY (`book_id`,`author_id`)
 );
 
-CREATE TABLE `books_delivery` (
+CREATE TABLE `books_deliverys` (
 	`delivery_id` INT NOT NULL,
 	`book_id` INT NOT NULL,
 	PRIMARY KEY (`delivery_id`,`book_id`)
