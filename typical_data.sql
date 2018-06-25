@@ -60,7 +60,7 @@ INSERT INTO `fines` (`delivery_id`, `description`, `price`) VALUES
 (2, 'Утеря', '1000'),
 (3, 'Задержка', '500'),
 (4, 'Утеря', '1000'),
-(6, 'Утеря', '1500');
+(5, 'Утеря', '1500');
 
 INSERT INTO `book_delivery` (`delivery_id`, `book_id`) VALUES
 (1,1),
