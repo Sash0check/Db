@@ -33,11 +33,11 @@
        
        /*Представление с основной информациeй о заказе*/
           CREATE VIEW delivery_info 
-          AS SELECT `deliverys`.id  as `delivery_id`,`clients`.firstname  as `client_name`, 
+	      AS SELECT `deliverys`.id  as `delivery_id`,`clients`.firstname  as `client_name`, 
 		  `clients`.lastname  as `client_lastname`, `books`.name as `book_name`, 
 		  `workers`.lastname as `worker_lastname`
-          FROM `clients`,`books`,`workers`,`deliverys`,`book_delivery` 
-		  WHERE `deliverys`.id=`book_delivery`.delivery_id and `book_delivery`.book_id=`books`.id
+	      FROM `clients`,`books`,`workers`,`deliverys`,`books_deliverys` 
+		  WHERE `deliverys`.id=`books_deliverys`.delivery_id and `books_deliverys`.book_id=`books`.id
 		  and `clients`.id=`deliverys`.client_id and `deliverys`.worker_id=`workers`.id;
 
           SELECT * FROM delivery_info where delivery_id=1
@@ -47,12 +47,12 @@
 	    AS SELECT `books`.id as `book_id`,`books`.name as `book_name`, GROUP_CONCAT(`genres`.name) as genres, 
 		`authors`.firstname as `author_name`, `authors`.lastname as `author_lastname`, 
 		`authors`.patronymic as `author_patronymic`, `books`.availability as `availability`
-	     FROM `books`,`authors`,`book_authors`,`genres`,`book_genre` 
+	     FROM `books`,`authors`,`books_authors`,`genres`,`books_genres` 
 		 where `books`.id=`books_authors`.book_id and `books_authors`.author_id=`authors`.id
 			and `books_genres`.book_id=`books`.id and `books_genres`.genre_id=`genres`.id
 		GROUP BY `books`.id; 
 
-          SELECT * FROM book_info WHERE `book_id`=1;
+          SELECT * FROM book_info WHERE `book_id`=6;
 		  
        /*Представление с доступными книгами*/
           CREATE VIEW available_books
