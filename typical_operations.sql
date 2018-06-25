@@ -17,13 +17,13 @@ VALUES ('Иван', 'Петров', 'Сергеевич', '1988-12-12', 'где-
 INSERT INTO `books` (`name`, `extra_information`, `availability`) VALUES ('Мастер и Маргарита', 'издание **', '1');
 
 /*Определение автора*/
-INSERT INTO `book_authors` (`book_id`, `author_id`) VALUES ('1', '1');
+INSERT INTO `book_authors` (`book_id`, `author_id`) VALUES ('6', '6');
 
 /*Определение жанра 1*/
-INSERT INTO `book_genre` (`book_id`, `genre_id`) VALUES ('1', '1');
+INSERT INTO `book_genre` (`book_id`, `genre_id`) VALUES ('6', '1');
 
 /*Определение жанра 2*/
-INSERT INTO `book_genre` (`book_id`, `genre_id`) VALUES ('1', '2');
+INSERT INTO `book_genre` (`book_id`, `genre_id`) VALUES ('6', '2');
 
 
 /*Добавление заказа*/
