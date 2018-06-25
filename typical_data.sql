@@ -27,11 +27,11 @@ INSERT INTO `book_authors` (`book_id`, `author_id`) VALUES
 (5,5);
 
 INSERT INTO `book_genre` (`book_id`, `genre_id`) VALUES
+(1,1),
 (2,2),
 (3,3),
 (4,4),
-(5,5),
-(6,6);
+(5,5);
 
 INSERT INTO `workers` (`firstname`, `lastname`, `phone_numder`, `adress`, `dbirth`, `email`, `patronymic`) VALUES 
 ('Иван', 'Васильев', '88889871211', 'Советская,2', '2018-06-03', 't1@mail.ru', 'Алексеевич'),
@@ -48,23 +48,24 @@ INSERT INTO `clients` (`firstname`, `lastname`, `phone_numder`, `adress`, `dbirt
 ('Александр', 'Тимофеев', '88889871252', 'Советская,25', '2018-06-05', 't15@mail.ru', 'Алексеевич');
 
 INSERT INTO `delivery` (`client_id`, `worker_id`, `date_of_delivery`, `date_of_return`) VALUES 
+(1, 1, '2018-02-06', '2018-03-24'),
 (2, 2, '2018-02-04', '2018-03-14'),
 (3, 3, '2018-02-05', '2018-03-24'),
 (4, 5, '2018-02-01', '2018-03-14'),
-(5, 4, '2018-02-02', '2018-02-24'),
-(6, 6, '2018-02-06', '2018-03-24');
+(5, 4, '2018-02-02', '2018-02-24');
 
 
 INSERT INTO `fines` (`delivery_id`, `description`, `price`) VALUES 
+(1, 'Утеря', '1000'),
 (2, 'Утеря', '1000'),
 (3, 'Задержка', '500'),
 (4, 'Утеря', '1000'),
-(6, 'Утеря', '1500'),
-(5, 'Утеря', '1000');
+(6, 'Утеря', '1500');
 
 INSERT INTO `book_delivery` (`delivery_id`, `book_id`) VALUES
+(1,1),
 (2,2),
 (3,3),
 (4,4),
-(5,5),
-(6,6);
+(5,5);
+
