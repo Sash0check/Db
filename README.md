@@ -43,17 +43,20 @@
           SELECT * FROM delivery_info where delivery_id=1
           
        /*Представление с основной информациeй о книге*/
-          CREATE VIEW information_about_book
-                    AS SELECT `books`.id as 'id_book',`books`.name as 'book_name',  `authors`.firstname as 'author_name',
-		`authors`.lastname as 'author_lastname',	`authors`.patronymic as 'author_patronymic',
-		`books`.availability as `availability`
-                    FROM `books`,`authors`,`book_authors` where `books`.id=`book_authors`.book_id and 	 `book_authors`.author_id=`authors`.id;
+           CREATE VIEW book_info
+	    AS SELECT `books`.id as `book_id`,`books`.name as `book_name`, GROUP_CONCAT(`genre`.name) as genres, 
+		`authors`.firstname as `author_name`, `authors`.lastname as `author_lastname`, 
+		`authors`.patronymic as `author_patronymic`, `books`.availability as `availability`
+	     FROM `books`,`authors`,`book_authors`,`genre`,`book_genre` 
+		 where `books`.id=`book_authors`.book_id and `book_authors`.author_id=`authors`.id
+			and `book_genre`.book_id=`books`.id and `book_genre`.genre_id=`genre`.id
+		GROUP BY `books`.id; 
 
-          SELECT * FROM information_about_book WHERE `id_book`=1;
+          SELECT * FROM book_info WHERE `book_id`=1;
 		  
        /*Представление с доступными книгами*/
           CREATE VIEW available_books
                     AS SELECT * 
-                    FROM information_about_book where availability=1;
+                    FROM book_info where availability=1;
 
           SELECT * FROM available_books;
