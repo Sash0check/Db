@@ -20,11 +20,11 @@ INSERT INTO `genre` (`name`) VALUES
 ( 'Биография');
 
 INSERT INTO `book_authors` (`book_id`, `author_id`) VALUES
+(1,1),
 (2,2),
 (3,3),
 (4,4),
-(5,5),
-(6,6);
+(5,5);
 
 INSERT INTO `book_genre` (`book_id`, `genre_id`) VALUES
 (2,2),
