@@ -29,7 +29,7 @@ CREATE TABLE `clients` (
 
 CREATE TABLE `workers` (
 	`id` INT NOT NULL AUTO_INCREMENT,
-	`name` varchar(50) NOT NULL,
+	`firstname` varchar(50) NOT NULL,
 	`lastname` varchar(50) NOT NULL,
 	`phone_numder` varchar(12) NOT NULL,
 	`adress` varchar(100) NOT NULL,
@@ -37,12 +37,12 @@ CREATE TABLE `workers` (
 	`email` varchar(50) NOT NULL,
 	`patronymic` varchar(50) NOT NULL,
 	PRIMARY KEY (`id`)
-)
+);
 
 CREATE TABLE `authors` (
 	`id` INT NOT NULL AUTO_INCREMENT,
 	`firstname` varchar(50) NOT NULL,
-	`secondname` varchar(50) NOT NULL,
+	`lastname` varchar(50) NOT NULL,
 	`patronymic` varchar(50) NOT NULL,
 	PRIMARY KEY (`id`)
 );
