@@ -17,7 +17,7 @@ CREATE TABLE `delivery` (
 
 CREATE TABLE `clients` (
 	`id` INT NOT NULL AUTO_INCREMENT,
-	`name` varchar(50) NOT NULL,
+	`firstname` varchar(50) NOT NULL,
 	`lastname` varchar(50) NOT NULL,
 	`patronymic` varchar(50) NOT NULL,
 	`dbirth` DATE NOT NULL,
@@ -78,5 +78,3 @@ CREATE TABLE `book_genre` (
 	`genre_id` INT NOT NULL,
 	PRIMARY KEY (`book_id`,`genre_id`)
 );
-
-
