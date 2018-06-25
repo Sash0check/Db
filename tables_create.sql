@@ -73,7 +73,7 @@ CREATE TABLE `fines` (
 	PRIMARY KEY (`id`)
 );
 
-CREATE TABLE `books_genre` (
+CREATE TABLE `books_genres` (
 	`book_id` INT NOT NULL,
 	`genre_id` INT NOT NULL,
 	PRIMARY KEY (`book_id`,`genre_id`)
