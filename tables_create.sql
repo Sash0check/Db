@@ -47,19 +47,19 @@ CREATE TABLE `authors` (
 	PRIMARY KEY (`id`)
 );
 
-CREATE TABLE `genre` (
+CREATE TABLE `genres` (
 	`id` INT NOT NULL AUTO_INCREMENT,
 	`name` varchar(50) NOT NULL,
 	PRIMARY KEY (`id`)
 );
 
-CREATE TABLE `book_authors` (
+CREATE TABLE `books_authors` (
 	`book_id` INT NOT NULL,
 	`author_id` INT NOT NULL,
 	PRIMARY KEY (`book_id`,`author_id`)
 );
 
-CREATE TABLE `book_delivery` (
+CREATE TABLE `books_delivery` (
 	`delivery_id` INT NOT NULL,
 	`book_id` INT NOT NULL,
 	PRIMARY KEY (`delivery_id`,`book_id`)
@@ -73,7 +73,7 @@ CREATE TABLE `fines` (
 	PRIMARY KEY (`id`)
 );
 
-CREATE TABLE `book_genre` (
+CREATE TABLE `books_genre` (
 	`book_id` INT NOT NULL,
 	`genre_id` INT NOT NULL,
 	PRIMARY KEY (`book_id`,`genre_id`)
