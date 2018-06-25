@@ -12,21 +12,21 @@ INSERT INTO `books` (`name`, `extra_information`, `availability`) VALUES
 ( 'Идиот', 'экстра', 1),
 ( 'Вий', 'экстра', 1);
 
-INSERT INTO `genre` (`name`) VALUES 
+INSERT INTO `genres` (`name`) VALUES 
 ( 'Фантастика'),
 ( 'Детектив'),
 ( 'Ужасы'),
 ( 'Трагедия'),
 ( 'Биография');
 
-INSERT INTO `book_authors` (`book_id`, `author_id`) VALUES
+INSERT INTO `books_authors` (`book_id`, `author_id`) VALUES
 (1,1),
 (2,2),
 (3,3),
 (4,4),
 (5,5);
 
-INSERT INTO `book_genre` (`book_id`, `genre_id`) VALUES
+INSERT INTO `books_genre` (`book_id`, `genre_id`) VALUES
 (1,1),
 (2,2),
 (3,3),
@@ -62,7 +62,7 @@ INSERT INTO `fines` (`delivery_id`, `description`, `price`) VALUES
 (4, 'Утеря', '1000'),
 (5, 'Утеря', '1500');
 
-INSERT INTO `book_delivery` (`delivery_id`, `book_id`) VALUES
+INSERT INTO `books_delivery` (`delivery_id`, `book_id`) VALUES
 (1,1),
 (2,2),
 (3,3),
