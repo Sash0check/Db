@@ -24,7 +24,7 @@ CREATE TABLE `clients` (
 	`patronymic` varchar(50) NOT NULL,
 	`dbirth` DATE NOT NULL,
 	`adress` varchar(50) NOT NULL,
-	`phone_numder` varchar(12) NOT NULL,
+	`phone_number` varchar(12) NOT NULL,
 	`email` varchar(255) NOT NULL,
 	PRIMARY KEY (`id`)
 );
