@@ -47,7 +47,7 @@ INSERT INTO `clients` (`firstname`, `lastname`, `phone_numder`, `adress`, `dbirt
 ('Татьяна', 'Корсакова', '88889871242', 'Советская,24', '2018-06-04', 't41@mail.ru', 'Александровна'),
 ('Александр', 'Тимофеев', '88889871252', 'Советская,25', '2018-06-05', 't15@mail.ru', 'Алексеевич');
 
-INSERT INTO `deliverys` (`client_id`, `worker_id`, `date_of_delivery`, `date_of_return`) VALUES 
+INSERT INTO `deliveries` (`client_id`, `worker_id`, `date_of_delivery`, `date_of_return`) VALUES 
 (1, 1, '2018-02-06', '2018-03-24'),
 (2, 2, '2018-02-04', '2018-03-14'),
 (3, 3, '2018-02-05', '2018-03-24'),
@@ -62,7 +62,7 @@ INSERT INTO `fines` (`delivery_id`, `description`, `price`) VALUES
 (4, 'Утеря', '1000'),
 (5, 'Утеря', '1500');
 
-INSERT INTO `books_deliverys` (`delivery_id`, `book_id`) VALUES
+INSERT INTO `books_deliveries` (`delivery_id`, `book_id`) VALUES
 (1,1),
 (2,2),
 (3,3),
