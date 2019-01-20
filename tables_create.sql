@@ -56,7 +56,7 @@ CREATE TABLE `genres` (
 );
 
 
-CREATE TABLE `books_deliverys` (
+CREATE TABLE `books_deliveries` (
 	`delivery_id` INT NOT NULL,
 	`book_id` INT NOT NULL,
 	PRIMARY KEY (`delivery_id`,`book_id`)
