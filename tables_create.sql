@@ -1,12 +1,14 @@
 CREATE TABLE `books` (
 	`id` INT NOT NULL AUTO_INCREMENT,
 	`name` varchar(100) NOT NULL,
+	`author_id` INT NOT NULL,
+	`genree_id` INT NOT NULL,
 	`extra_information` varchar(255) NOT NULL,
 	`availability` BOOLEAN NOT NULL,
 	PRIMARY KEY (`id`)
 );
 
-CREATE TABLE `deliverys` (
+CREATE TABLE `deliveries` (
 	`id` INT NOT NULL AUTO_INCREMENT,
 	`client_id` INT NOT NULL,
 	`date_of_delivery` DATE NOT NULL,
@@ -53,11 +55,6 @@ CREATE TABLE `genres` (
 	PRIMARY KEY (`id`)
 );
 
-CREATE TABLE `books_authors` (
-	`book_id` INT NOT NULL,
-	`author_id` INT NOT NULL,
-	PRIMARY KEY (`book_id`,`author_id`)
-);
 
 CREATE TABLE `books_deliverys` (
 	`delivery_id` INT NOT NULL,
@@ -71,10 +68,4 @@ CREATE TABLE `fines` (
 	`description` varchar(255) NOT NULL,
 	`price` INT NOT NULL,
 	PRIMARY KEY (`id`)
-);
-
-CREATE TABLE `books_genres` (
-	`book_id` INT NOT NULL,
-	`genre_id` INT NOT NULL,
-	PRIMARY KEY (`book_id`,`genre_id`)
 );
