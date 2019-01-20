@@ -26,7 +26,7 @@ INSERT INTO `workers` (`firstname`, `lastname`, `phone_number`, `adress`, `dbirt
 ('Семен', 'Полынов', '88889871215', 'Советская,5', '2018-03-03', 't4@mail.ru', 'Александрович'),
 ('Артём', 'Кедрин', '88889874213', 'Советская,6', '2018-04-03', 't5@mail.ru', 'Алексеевич');
 
-INSERT INTO `clients` (`firstname`, `lastname`, `phone_numder`, `adress`, `dbirth`, `email`, `patronymic`) VALUES
+INSERT INTO `clients` (`firstname`, `lastname`, `phone_number`, `adress`, `dbirth`, `email`, `patronymic`) VALUES
 ('Олег', 'Орхипов', '88889871212', 'Советская,21', '2018-06-01', 't11@mail.ru', 'Алексеевич'),
 ('Тимур', 'Бекбек', '88889871222', 'Советская,22', '2018-06-13', 't12@mail.ru', 'Сергеевич'),
 ('Артадий', 'Песков', '88889871232', 'Советская,23', '2018-06-02', 't13@mail.ru', 'Алексеевич'),
