@@ -19,7 +19,7 @@ INSERT INTO `genres` (`name`) VALUES
 ( 'Трагедия'),
 ( 'Биография');
 
-INSERT INTO `workers` (`firstname`, `lastname`, `phone_numder`, `adress`, `dbirth`, `email`, `patronymic`) VALUES 
+INSERT INTO `workers` (`firstname`, `lastname`, `phone_number`, `adress`, `dbirth`, `email`, `patronymic`) VALUES 
 ('Иван', 'Васильев', '88889871211', 'Советская,2', '2018-06-03', 't1@mail.ru', 'Алексеевич'),
 ('Андрей', 'Петров', '88889871213', 'Советская,3', '2018-01-03', 't2@mail.ru', 'Сергеевич'),
 ('Александр', 'Павлов', '88889871214', 'Советская,4', '2018-02-03', 't3@mail.ru', 'Алексеевич'),
