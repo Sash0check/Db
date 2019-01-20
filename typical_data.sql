@@ -19,20 +19,6 @@ INSERT INTO `genres` (`name`) VALUES
 ( 'Трагедия'),
 ( 'Биография');
 
-INSERT INTO `books_authors` (`book_id`, `author_id`) VALUES
-(1,1),
-(2,2),
-(3,3),
-(4,4),
-(5,5);
-
-INSERT INTO `books_genre` (`book_id`, `genre_id`) VALUES
-(1,1),
-(2,2),
-(3,3),
-(4,4),
-(5,5);
-
 INSERT INTO `workers` (`firstname`, `lastname`, `phone_numder`, `adress`, `dbirth`, `email`, `patronymic`) VALUES 
 ('Иван', 'Васильев', '88889871211', 'Советская,2', '2018-06-03', 't1@mail.ru', 'Алексеевич'),
 ('Андрей', 'Петров', '88889871213', 'Советская,3', '2018-01-03', 't2@mail.ru', 'Сергеевич'),
