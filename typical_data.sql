@@ -5,12 +5,12 @@ INSERT INTO `authors` (`firstname`, `lastname`, `patronymic`) VALUES
 ( 'Фёдор', 'Достоевский', 'Михайлович'),
 ( 'Николай', 'Гоголь', 'Васильевич');
 
-INSERT INTO `books` (`name`, `extra_information`, `availability`) VALUES 
-( 'Дубровский', 'экстра', 1),
-( 'Ася', 'экстра', 1),
-( 'Мцыри', 'экстра', 1),
-( 'Идиот', 'экстра', 1),
-( 'Вий', 'экстра', 1);
+INSERT INTO `books` (`name`, `author_id`,`genree_id`,`extra_information`, `availability`) VALUES 
+( 'Дубровский', 1,4,'экстра', 1),
+( 'Ася', 2,1'экстра', 1),
+( 'Мцыри',3,2 'экстра', 1),
+( 'Идиот',4,3 'экстра', 1),
+( 'Вий',5,5 'экстра', 1);
 
 INSERT INTO `genres` (`name`) VALUES 
 ( 'Фантастика'),
