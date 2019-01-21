@@ -33,9 +33,12 @@
        
        /*Представление с основной информациeй о заказе*/
           CREATE VIEW delivery_info 
-	      AS SELECT `deliveries`.id  as `delivery_id`,`clients`.firstname  as `client_name`, 
-		  `clients`.lastname  as `client_lastname`, `books`.name as `book_name`, 
-		  `workers`.lastname as `worker_lastname`
+	      AS SELECT `deliveries`.id  as `delivery_id`,
+	      CONCAT_WS(" ", `clients`.`firstname`, `clients`.`lastname`) as `client_name`, 
+		  `books`.name as `book_name`, 
+		  CONCAT_WS(" ", `workers`.`firstname`, `workers`.`lastname`) as `worker_name`, 
+		  `deliveries`.date_of_delivery as `date_of_delivery`,
+		  `deliveries`.date_of_return as `date_of_return`
 	      FROM `clients`,`books`,`workers`,`deliveries`,`books_deliveries` 
 		  WHERE `deliveries`.id=`books_deliveries`.delivery_id and `books_deliveries`.book_id=`books`.id
 		  and `clients`.id=`deliveries`.client_id and `deliveries`.worker_id=`workers`.id;
