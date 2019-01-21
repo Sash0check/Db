@@ -33,12 +33,12 @@
        
        /*Представление с основной информациeй о заказе*/
           CREATE VIEW delivery_info 
-	      AS SELECT `deliverys`.id  as `delivery_id`,`clients`.firstname  as `client_name`, 
+	      AS SELECT `deliveries`.id  as `delivery_id`,`clients`.firstname  as `client_name`, 
 		  `clients`.lastname  as `client_lastname`, `books`.name as `book_name`, 
 		  `workers`.lastname as `worker_lastname`
-	      FROM `clients`,`books`,`workers`,`deliverys`,`books_deliverys` 
-		  WHERE `deliverys`.id=`books_deliverys`.delivery_id and `books_deliverys`.book_id=`books`.id
-		  and `clients`.id=`deliverys`.client_id and `deliverys`.worker_id=`workers`.id;
+	      FROM `clients`,`books`,`workers`,`deliveries`,`books_deliveries` 
+		  WHERE `deliveries`.id=`books_deliveries`.delivery_id and `books_deliveries`.book_id=`books`.id
+		  and `clients`.id=`deliveries`.client_id and `deliveries`.worker_id=`workers`.id;
 
           SELECT * FROM delivery_info where delivery_id=1
           
