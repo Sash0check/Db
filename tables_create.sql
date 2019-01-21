@@ -57,9 +57,10 @@ CREATE TABLE `genres` (
 
 
 CREATE TABLE `books_deliveries` (
+	`id` INT NOT NULL AUTO_INCREMENT,
 	`delivery_id` INT NOT NULL,
 	`book_id` INT NOT NULL,
-	PRIMARY KEY (`delivery_id`,`book_id`)
+	PRIMARY KEY (`id`)
 );
 
 CREATE TABLE `fines` (
